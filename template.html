@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <p>{{ content }}</p>
+
+    <h3> {{ sunman }} </h3>
+
+
+    <h2>Simple Table Example</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        {% for row in table_data %}
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.age }}</td>
+            <td>{{ row.city }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+
+
+    <h2>Product Table</h2>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price ($)</th>
+            <th>Stock</th>
+        </tr>
+        {% for row in table_data2 %}
+        <tr>
+            <td>{{ row.product }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.stock }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <hr>
+
+
+    <h2>Country Information</h2>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Population</th>
+            <th>Area (sq km)</th>
+        </tr>
+        {% for row in table_data3 %}
+        <tr>
+            <td>{{ row.country }}</td>
+            <td>{{ row.population }}</td>
+            <td>{{ row.area }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
